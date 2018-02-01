@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="validate">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/main/webapp/resources/css/lib/blueprint/validate/xerces.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/main/webapp/resources/css/lib/blueprint/validate/jigsaw.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/main/webapp/resources/css/lib/blueprint/validate/css-validator-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/main/webapp/resources/css/lib/blueprint/validate/css-validator.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

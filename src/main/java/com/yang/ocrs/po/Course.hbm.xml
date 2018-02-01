@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 3, 2013 10:37:19 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+ <class name="com.yang.ocrs.po.Course" table="COURSE">
+  <id name="id" type="java.lang.Integer">
+   <column name="ID"/>
+   <generator class="native"/>
+  </id>
+  <property generated="never" lazy="false" name="courseNum" type="java.lang.String">
+   <column name="COURSENUM" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="term" type="int">
+   <column name="TERM" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="courseName" type="java.lang.String">
+   <column name="COURSENAME" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="secNum" type="int">
+   <column name="SECNUM" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="courseDesp" type="java.lang.String">
+   <column name="COURSEDESP"/>
+  </property>
+  <many-to-one class="com.yang.ocrs.po.Subject" fetch="join" lazy="false" name="sub">
+   <column name="SUB" not-null="true"/>
+  </many-to-one>
+  <many-to-one class="com.yang.ocrs.po.Instructor" fetch="join" lazy="false" name="instructor">
+   <column name="INSTRUCTOR" not-null="true"/>
+  </many-to-one>
+  <property generated="never" lazy="false" name="level" type="int">
+   <column name="LEVEL" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="credit" type="int">
+   <column name="CREDIT" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="instructionMethod" type="int">
+   <column name="INSTRUCTIONMETHOD" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="scheduleType" type="int">
+   <column name="SCHEDULETYPE" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="startTime" type="java.sql.Time">
+   <column name="STARTTIME" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="endTime" type="java.sql.Time">
+   <column name="ENDTIME" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="openToOtherSub" type="boolean">
+   <column default="true" name="OPENTOOTHERSUB"/>
+  </property>
+  <property generated="never" lazy="false" name="openToOtherCol" type="boolean">
+   <column default="true" name="OPENTOOTHERCOL"/>
+  </property>
+  <property generated="never" lazy="false" name="location" type="java.lang.String">
+   <column name="LOCATION"/>
+  </property>
+  <set name="days" lazy="false" table="day" >
+  	<key column="COURSE_ID" not-null="true"/>
+  	<element type="string" column="DAY"/>
+  </set>
+  <property generated="never" lazy="false" name="maxNum" type="int">
+   <column name="MAXNUM" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="numStu" type="int">
+   <column default="0" name="NUMSTU" not-null="true"/>
+  </property>
+ </class>
+</hibernate-mapping>

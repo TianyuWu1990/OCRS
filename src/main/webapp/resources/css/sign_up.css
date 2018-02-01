@@ -1,0 +1,7 @@
+.container{width:700px;height:700px;font-size:20px; border:black 1px solid;}
+.header{width:700px;height:200px;font-size:50px; font-weight:bold; background-color:#ab8b3d; border-bottom:black 1px solid;}
+.main{width:700px;height:500px;margin-top:50px;}
+.error {
+  color: #ff0000;
+  font-weight: bold; 
+}

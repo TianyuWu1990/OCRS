@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 3, 2013 10:37:19 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+ <class name="com.yang.ocrs.po.User" table="USER">
+  <id name="id" type="java.lang.Integer">
+   <column name="ID"/>
+   <generator class="native"/>
+  </id>
+  <property generated="never" lazy="false" name="userName" type="java.lang.String">
+   <column name="USERNAME" not-null="true" unique="true"/>
+  </property>
+  <property generated="never" lazy="false" name="pwd" type="java.lang.String">
+   <column name="PWD" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="userType" type="java.lang.String">
+   <column name="USERTYPE" not-null="true"/>
+  </property>
+  <many-to-one class="com.yang.ocrs.po.Student" fetch="join" name="stu" lazy="false">
+   <column name="STU" unique="true"/>
+  </many-to-one>
+ </class>
+</hibernate-mapping>
